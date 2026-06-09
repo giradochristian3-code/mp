@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mp/pertemuan10/login.dart';
+import 'package:mp/pertemuan11/login_page.dart';
 import 'package:mp/pertemuan3/latihan1.dart';
 import 'package:mp/pertemuan4/latihan1.dart';
 import 'package:mp/pertemuan4/main.dart';
@@ -183,9 +184,19 @@ class MateriPage extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => Login()));
                     },
                   ),
+                  _buildMenuItem(
+                    icon: Icons.folder,
+                    color: Colors.green,
+                    label: 'Pertemuan 11',
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => LoginPage()));
+                    },
+                  ),
                 ],
               ),
             ),
+            const SizedBox(height: 16),
           ],
         ),
       ),
@@ -414,7 +425,7 @@ class ProfilePage extends StatelessWidget {
   }
 }
 
-// ← DITAMBAHKAN: PageMain dengan bottom navbar
+// PageMain dengan bottom navbar
 class PageMain extends StatefulWidget {
   const PageMain({Key? key}) : super(key: key);
 

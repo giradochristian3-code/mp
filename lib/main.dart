@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:mp/navbar.dart';
 import 'package:mp/pertemuan10/login.dart';
+import 'package:mp/pertemuan11/session_model.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initializeDateFormatting('id_ID', null);
-  runApp(const MainPage());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => SessionModel()..loadSession(),
+      child: const MainPage(),
+    ),
+  );
 }
 
 class MainPage extends StatelessWidget {
-  const MainPage({Key? key}) : super(key: key);  // ← tambah const constructor
-  
+  const MainPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
