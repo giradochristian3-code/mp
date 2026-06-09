@@ -32,7 +32,3 @@ Runner/GeneratedPluginRegistrant.*
 !default.mode2v3
 !default.pbxuser
 !default.perspectivev3
-
-# Izinkan Git untuk membawa Shared Schemes Xcode
-!ios/Runner.xcodeproj/xcshareddata/
-!ios/Runner.xcworkspace/xcshareddata/
