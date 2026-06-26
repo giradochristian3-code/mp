@@ -10,6 +10,7 @@ import 'package:mp/pertemuan7/main.dart';
 import 'package:mp/pertemuan8/main.dart';
 import 'package:mp/pertemuan8/tugasp8/tugas_pertemuan8.dart';
 import 'package:mp/pertemuan9/latihanp9.dart';
+import 'package:mp/pertemuan13/pages/welcome_page.dart';
 import 'package:mp/pertemuan9/main.dart';
 
 // Halaman Materi (Home)
@@ -191,6 +192,15 @@ class MateriPage extends StatelessWidget {
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => LoginPage()));
+                    },
+                  ),
+                  _buildMenuItem(
+                    icon: Icons.folder,
+                    color: Colors.green,
+                    label: 'Pertemuan 13',
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => WelcomePage()));
                     },
                   ),
                 ],
@@ -411,8 +421,10 @@ class ProfilePage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pop();
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Berhasil logout'), duration: Duration(seconds: 2), behavior: SnackBarBehavior.floating),
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Login()),
+                  (route) => false,
                 );
               },
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),

@@ -20,6 +20,9 @@ dependencies:
   intl: ^0.20.2
   shared_preferences: ^2.5.5
   provider: ^6.1.5+1
+  audioplayers: ^6.4.0
+  video_player: ^2.10.0
+  chewie: ^1.8.0
 
 dev_dependencies:
   flutter_test:
@@ -33,6 +36,7 @@ flutter:
 
   assets:
     - assets/appimages/
+    - assets/Audio/
 
 flutter_launcher_icons:
   android: "launcher_icon"
